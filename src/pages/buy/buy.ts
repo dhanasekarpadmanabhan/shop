@@ -10,16 +10,16 @@ import {LoginPage } from '../login/login';
 @Component({
 
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'buy.html'
 })
-export class HomePage {
+export class BuyPage {
   title:string;
 shoppingList$:Observable<Item[]>;
   constructor(private toast:ToastController,private afAuth:AngularFireAuth,public navCtrl: NavController,private shopping:ShoppigListService,public navParams: NavParams ) {
 this.title=this.navParams.get('param1')
 console.log(this.title)
     this.shoppingList$=this.shopping
-    .getShoppingList()  //DB list
+    .getShoppingList1()  //DB list
     .snapshotChanges()   // Key and value
     .map(
       changes=>{
@@ -43,6 +43,7 @@ ionViewWillLoad(){
       message:"Could not found the authentication details try again",
       duration:3000
     }).present();
+
   }
 })
 }

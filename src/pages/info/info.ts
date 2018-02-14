@@ -1,25 +1,26 @@
 import { Component } from '@angular/core';
-import { NavController , ToastController, NavParams} from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 
 import {ShoppigListService } from '../../services/shopping-list/shopping-list.service';
 import {Observable} from 'rxjs/Observable';
-import {Item } from '../../models/item/item.model'
+import {Info } from '../../models/info/info'
 import {AngularFireAuth} from 'angularfire2/auth';
 import {LoginPage } from '../login/login';
 
-@Component({
 
-  selector: 'page-home',
-  templateUrl: 'home.html'
+@IonicPage()
+@Component({
+  selector: 'page-info',
+  templateUrl: 'info.html',
 })
-export class HomePage {
-  title:string;
-shoppingList$:Observable<Item[]>;
+export class InfoPage {
+   title:string;
+shoppingList$:Observable<Info[]>;
   constructor(private toast:ToastController,private afAuth:AngularFireAuth,public navCtrl: NavController,private shopping:ShoppigListService,public navParams: NavParams ) {
 this.title=this.navParams.get('param1')
 console.log(this.title)
     this.shoppingList$=this.shopping
-    .getShoppingList()  //DB list
+    .getShoppingList2()  //DB list
     .snapshotChanges()   // Key and value
     .map(
       changes=>{
@@ -43,6 +44,7 @@ ionViewWillLoad(){
       message:"Could not found the authentication details try again",
       duration:3000
     }).present();
+
   }
 })
 }

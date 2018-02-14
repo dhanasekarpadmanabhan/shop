@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>
-      Shopping List
+      File list
     </ion-title>
 <div align="right">
 
@@ -20,18 +20,8 @@
    <ion-list-header>
 Items
    </ion-list-header>
-   <ion-item *ngFor="let item of shoppingList$ | async" detail-push navPush="EditShoppingItemPage" [navParams]="{item: item}">
-<ion-grid>
-     <ion-row>
-       <ion-col>
-     <h1> {{item.name}}</h1>
-     <p>Quantity in hand   :{{item.quantity}}</p>
+   <ion-item >
 
- </ion-col> <ion-col>
-       <h1><ion-icon name="logo-usd"></ion-icon>{{item.price}}</h1>
-       </ion-col>
-   </ion-row>
-     </ion-grid>
    </ion-item>
 </ion-list>
 

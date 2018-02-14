@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+    Item List
+    </ion-title>
+<div align="right">
+
+  </div>
+    <ion-buttons end>
+      <button  navPush="AddInfoPage" ion-button>
+          <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-list>
+   <ion-list-header>
+Items
+   </ion-list-header>
+   <ion-item *ngFor="let item of shoppingList$ | async" detail-push navPush="EditInfoPage" [navParams]="{info: item}">
+
+
+          <ion-card>
+            <ion-card-header>
+              <h1> {{item.name}}</h1>
+            </ion-card-header>
+
+            <ion-list>
+              <button ion-item>
+                <ion-icon name="cart" item-start></ion-icon>
+            {{item.info1}}
+              </button>
+          
+              <button ion-item>
+                <ion-icon name="medical" item-start></ion-icon>
+              {{item.info2}}
+              </button>
+
+              <button ion-item>
+                <ion-icon name="cafe" item-start></ion-icon>
+              {{item.info3}}
+              </button>
+
+              <button ion-item>
+                <ion-icon name="paw" item-start></ion-icon>
+                {{item.info4}}
+              </button>
+
+              <button ion-item>
+                <ion-icon name="beer" item-start></ion-icon>
+              {{item.info5}}
+              </button>
+
+
+
+            </ion-list>
+          </ion-card>
+
+
+   </ion-item>
+</ion-list>
+
+</ion-content>
+
+
+<ion-footer>
+<div class="row">
+  <div class="col-sm-8" align="center">
+    <p> @copyright by DHANASEKAR P</p>
+</div>
+<div class="col-sm-4" align="right">
+  <button ion-button end (click)=logout()>logout</button>
+</div>
+</div>
+</ion-footer>

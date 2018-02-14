@@ -1,0 +1,71 @@
+<!--
+  Generated template for the MainPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>main</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card  (click)="info1('bill')">
+
+    <ion-card-content>
+      <ion-card-title>
+        Billing Item
+        </ion-card-title>
+      <p>
+        Item with quantity and rate avaliable in the shop
+      </p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card  (click)="info2('buy')">
+
+    <ion-card-content>
+      <ion-card-title>
+        Things To BUY
+        </ion-card-title>
+      <p>
+        Item with quantity and rate to buy for  the shop
+      </p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card  (click)="info3('info')">
+  <ion-card-content>
+    <ion-card-title>
+      Things To INFORM
+      </ion-card-title>
+    <p>
+    words to say to dad about any information
+    </p>
+  </ion-card-content>
+</ion-card>
+<ion-card  (click)="info4('file')">
+<ion-card-content>
+  <ion-card-title>
+    FILES
+    </ion-card-title>
+  <p>
+  invoice are any photo to be
+  </p>
+</ion-card-content>
+</ion-card>
+</ion-content>
+
+
+<ion-footer>
+<div class="row"  align="right">
+  <div class="col-sm-8" >
+    <p> @copyright by DHANASEKAR P</p>
+</div>
+<div class="col-sm-4">
+  <button ion-button end (click)=logout()>logout</button>
+</div>
+</div>
+</ion-footer>

@@ -1,0 +1,46 @@
+<!--
+  Generated template for the EditInfoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>editInfo</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+        <ion-label>Name</ion-label>
+        <ion-input [(ngModel)]="info.name" placeholder="eg-- any type"></ion-input>
+  </ion-item>
+  <ion-item>
+        <ion-label>info1</ion-label>
+        <ion-input [(ngModel)]="info.info1" placeholder="info1"></ion-input>
+  </ion-item>
+  <ion-item>
+        <ion-label>info2</ion-label>
+        <ion-input [(ngModel)]="info.info2"   placeholder="info2"></ion-input>
+  </ion-item>
+  <ion-item>
+        <ion-label>info3</ion-label>
+        <ion-input [(ngModel)]="info.info3" placeholder="info3"></ion-input>
+  </ion-item>
+  <ion-item>
+        <ion-label>info4</ion-label>
+        <ion-input [(ngModel)]="info.info4"   placeholder="info4"></ion-input>
+  </ion-item>
+  <ion-item>
+        <ion-label>info5</ion-label>
+        <ion-input [(ngModel)]="info.info5"   placeholder="info5"></ion-input>
+  </ion-item>
+
+  <button ion-button block clear (click)="saveItem(info)">Save</button>
+
+  <button ion-button block clear color="danger" (click)="delete(info)">delete</button>
+
+</ion-content>
